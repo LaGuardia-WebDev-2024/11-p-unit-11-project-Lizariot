@@ -1,18 +1,17 @@
-var snowX = [100, 120, 160, 200];
-var snowY = [50, 70, 40, 20];
+// Arrays
+  let colors = ["lightblue", "lightpink", "lightgreen"];
+  let words = ["Beach", "Ice Cream", "Sunshine"];
+  let emojis = ["🏖", "🍦", "☀️"];
 
-setup = function() {
-   size(600, 450); 
-   background(164, 212, 255);
-  
-   textSize(40);
-   for(var i = 0; i < snowX.length; i++){
-     text("❆", snowX[i], snowY[i]);
-   }
-   
-   fill(255,255,255);
-   rect(-10, 300, 610, 150);
+  // Loop (runs once in the console)
+  for (let i = 0; i < words.length; i++) {
+    console.log("Summer Word:", words[i]);
+  }
 
-}
-
+  // Custom Function
+  function changeColor() {
+    let i = Math.floor(Math.random() * colors.length);
+    document.body.style.backgroundColor = colors[i];
+    document.getElementById("summerWord").innerText = words[i] + " " + emojis[i];
+  }
 
