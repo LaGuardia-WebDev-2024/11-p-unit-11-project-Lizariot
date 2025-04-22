@@ -27,11 +27,56 @@ Select ONE Additional
   <body>
     <div class="container">
       <div>
-        <h2 id="end">🍂🌼🌞⛄ | My Favorite Season</h2>
+        <h2 id="end">🌞 I love summer</h2>
         <canvas id="myCanvas" data-processing-sources="myP5Code.pde"> </canvas>
+        <title>Summer Vibes</title>
       </div>
     </div>
   </body>
 </html>
 
-<!--- Taken From Khan Academy Intro to JS: Drawing & Animation --->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Summer Vibes</title>
+    <style>
+      body {
+        background-color: lightyellow;
+        text-align: center;
+        padding-top: 50px;
+        font-family: sans-serif;
+      }
+      button {
+        font-size: 20px;
+        padding: 10px;
+      }
+      p {
+        font-size: 24px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Summer Vibes!</h1>
+    <button onclick="changeColor()">Click for Summer</button>
+    <p id="message">Ready for sunshine?</p>
+
+    <script>
+      // 
+      let colors = ["lightblue", "lightpink", "lightgreen"];
+      let messages = ["Beach 🏖", "Ice Cream 🍦", "Sunshine ☀️"];
+
+      // 
+      function changeColor() {
+        let i = Math.floor(Math.random() * colors.length);
+        document.body.style.backgroundColor = colors[i];
+        document.getElementById("message").innerText = messages[i];
+      }
+
+      // 
+      for (let i = 0; i < messages.length; i++) {
+        console.log(messages[i]);
+      }
+    </script>
+  </body>
+</html>
